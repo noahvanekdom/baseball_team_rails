@@ -68,6 +68,12 @@ RSpec.describe 'Teams show page' do
 
           expect(current_path).to eq("/players")
         end
+        it 'has a link to the players on the team' do
+          visit "/teams/#{@team.id}"
+          click_link "Players on the #{@team.team_name}"
+
+          expect(current_path).to eq("/teams/#{@team.id}/players")
+        end
       end
     end
   end
