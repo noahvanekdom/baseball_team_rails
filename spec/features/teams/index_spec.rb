@@ -6,19 +6,26 @@ RSpec.describe 'Teams index page' do
       describe "I see the name of each teams record in the system" do
 
         before(:each) do
+          @rays = Team.create!(city: "Tampa Bay", team_name: "Rays", win_percent: 0.718, division_leader:true)
+          @cardinals = Team.create!(city: "St. Louis", team_name: "Cardinals", win_percent: 0.619, division_leader:true)
         end
 
 
-        xit 'displays the city of the team' do
+        it 'displays the city of the team' do
 
           visit "/teams"
 
-          expect(page).to have_content(team1.city)
-          expect(page).to have_content(team2.city)
+          expect(page).to have_content(@rays.city)
+          expect(page).to have_content(@cardinals.city)
 
         end
 
-        xit 'displays the name of the team' do
+        it 'displays the name of the team' do
+
+          visit "/teams"
+
+          expect(page).to have_content(@rays.team_name)
+          expect(page).to have_content(@cardinals.team_name)
         end
 
       end

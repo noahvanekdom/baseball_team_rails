@@ -1,0 +1,11 @@
+<h1>Players</h1>
+
+<% @players.each do |player| %>
+  <p><%= player.name %></p>
+  <p><%= player.slg %></p>
+  <p><%= player.obp %></p>
+  <p><%= player.rule_5_elig %></p>
+  <p><%= player.handed %></p>
+
+  <% end %>
+
