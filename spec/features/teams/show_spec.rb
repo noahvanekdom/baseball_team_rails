@@ -44,6 +44,12 @@ RSpec.describe 'Teams show page' do
           visit "/teams/#{@team.id}"
           expect(page).to have_content(@team.updated_at)
         end
+
+        it 'displays the player count of the team' do
+
+          visit "/teams/#{@team.id}"
+          expect(page).to have_content(@team.player_count)
+        end
       end
     end
   end
