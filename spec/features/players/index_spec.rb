@@ -39,13 +39,13 @@ RSpec.describe 'Players index page' do
         end
         it 'has a link to team index' do
           visit "/players"
-          click_link "All Teams"
+          click_link "Teams"
 
           expect(current_path).to eq("/teams")
         end
         it 'has a link to the players index' do
           visit "/players"
-          click_link "All Players"
+          click_link "Players"
 
           expect(current_path).to eq("/players")
         end

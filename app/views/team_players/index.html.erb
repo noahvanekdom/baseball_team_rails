@@ -1,3 +1,6 @@
+<%= link_to "Teams", "/teams" %>
+<%= link_to "Players", "/players" %>
+
 <h1> <%= "#{@team.team_name}"%> players </h1>
 <% @players.each do |player| %>
 <h3><%= player.name %></h3>

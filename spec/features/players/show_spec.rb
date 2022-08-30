@@ -55,16 +55,18 @@ RSpec.describe 'players show page' do
 
       describe "page links" do
         before(:each) do
+          @cardinals = Team.create!(city: "St. Louis", team_name: "Cardinals", win_percent: 0.619, division_leader:true)
+          @player = @cardinals.players.create!(name: "Nolan Arenado", slg: 0.547, obp: 0.419, rule_5_elig: true, handed: "L")
         end
         it 'has a link to team index' do
           visit "/players/#{@player.id}"
-          click_link "All Teams"
+          click_link "Teams"
 
           expect(current_path).to eq("/teams")
         end
         it 'has a link to the players index' do
           visit "/players/#{@player.id}"
-          click_link "All Players"
+          click_link "Players"
 
           expect(current_path).to eq("/players")
         end
