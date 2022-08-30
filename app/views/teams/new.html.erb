@@ -1,0 +1,8 @@
+<%= form_with url: '/teams', method: :post, local: true do |form| %>
+
+<%= form.text_field :team_name %>
+<%= form.text_field :city %>
+<%= form.text_field :win_percent %>
+<%= form.text_field :division_leader %>
+<%= form.submit "Create Team" %>
+<% end %>

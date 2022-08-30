@@ -1,10 +1,12 @@
 <%= link_to "Teams", "/teams" %>
 <%= link_to "Players", "/players" %>
-
+<%= link_to "New Team", "/teams/new" %>
 <h1>Teams</h1>
 
 <% @teams.each do |team| %>
   <p><%= team.city %> <%= team.team_name %></p>
 
   <% end %>
+
+
 
