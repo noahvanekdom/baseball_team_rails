@@ -52,6 +52,23 @@ RSpec.describe 'players show page' do
           expect(page).to have_content(@player.updated_at)
         end
       end
+
+      describe "page links" do
+        before(:each) do
+        end
+        it 'has a link to team index' do
+          visit "/players/#{@player.id}"
+          click_link "All Teams"
+
+          expect(current_path).to eq("/teams")
+        end
+        it 'has a link to the players index' do
+          visit "/players/#{@player.id}"
+          click_link "All Players"
+
+          expect(current_path).to eq("/players")
+        end
+      end
     end
   end
 end

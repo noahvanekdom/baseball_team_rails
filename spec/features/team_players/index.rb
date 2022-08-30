@@ -14,13 +14,11 @@ RSpec.describe 'Players index page' do
           @shane = @rays.players.create!(name: "Shane Bas", slg: 0.198, obp: 0.209, rule_5_elig: true, handed: "R")
         end
 
-
         it 'displays the names of players' do
 
           visit "/teams/#{@cardinals.id}/players"
           expect(page).to have_content(@nolan.name)
           expect(page).to have_content(@paul.name)
-
         end
 
         it 'displays the attributes of players' do
@@ -35,7 +33,22 @@ RSpec.describe 'Players index page' do
           expect(page).to have_content(@paul.handed)
           expect(page).to have_content(@nolan.rule_5_elig)
         end
+      end
+      describe "page links" do
+        before(:each) do
+        end
+        it 'has a link to team index' do
+          visit "/teams/#{@cardinals.id}/players"
+          click_link "All Teams"
 
+          expect(current_path).to eq("/teams")
+        end
+        it 'has a link to the players index' do
+          visit "/teams/#{@cardinals.id}/players"
+          click_link "All Players"
+
+          expect(current_path).to eq("/players")
+        end
       end
     end
   end
