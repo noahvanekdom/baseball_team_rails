@@ -2,7 +2,7 @@ require 'rails_helper'
 
 RSpec.describe 'Players index page' do
   describe 'As a visitor' do
-    describe 'when I visit "/players"' do
+    describe 'when I visit "/teams/:id/players"' do
       describe "I see the name of each players record in the system" do
 
         before(:each) do
