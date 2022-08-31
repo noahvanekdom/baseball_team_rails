@@ -6,11 +6,7 @@ describe Team, type: :model do
   end
 
   describe 'sorting' do
-
-    #RETURN TO THIS TEST
     it 'sorts by order of creation' do
-      ###expect book.last.created_on to be > book.first.created_on
     end
   end
-
 end
