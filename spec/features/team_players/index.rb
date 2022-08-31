@@ -5,7 +5,7 @@ RSpec.describe 'Players index page' do
     describe 'when I visit "/teams/:id/players"' do
       describe "I see the name of each players record in the system" do
 
-        before(:each) do
+        before :each do
           @rays = Team.create!(city: "Tampa Bay", team_name: "Rays", win_percent: 0.718, division_leader:true)
           @cardinals = Team.create!(city: "St. Louis", team_name: "Cardinals", win_percent: 0.619, division_leader:true)
 
@@ -35,7 +35,7 @@ RSpec.describe 'Players index page' do
         end
       end
       describe "page links" do
-        before(:each) do
+        before :each do
         end
         it 'has a link to team index' do
           visit "/teams/#{@cardinals.id}/players"

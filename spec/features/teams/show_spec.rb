@@ -4,7 +4,7 @@ RSpec.describe 'Teams show page' do
   describe 'As a visitor' do
     describe 'when I visit "/teams/:id"' do
       describe 'I see the team with that id including the team attributes:' do
-        before(:each) do
+        before :each do
           @team = Team.create!(city: "Tampa Bay", team_name: "Rays", win_percent: 0.718, division_leader:true)
         end
 
@@ -53,7 +53,7 @@ RSpec.describe 'Teams show page' do
       end
 
       describe "page links" do
-        before(:each) do
+        before :each do
           @team = Team.create!(city: "Tampa Bay", team_name: "Rays", win_percent: 0.718, division_leader:true)
         end
         it 'has a link to team index' do

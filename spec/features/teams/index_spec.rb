@@ -5,7 +5,7 @@ RSpec.describe 'Teams index page' do
     describe 'when I visit "/teams"' do
       describe "I see the name of each teams record in the system" do
 
-        before(:each) do
+        before :each do
           @rays = Team.create!(city: "Tampa Bay", team_name: "Rays", win_percent: 0.718, division_leader:true)
           @cardinals = Team.create!(city: "St. Louis", team_name: "Cardinals", win_percent: 0.619, division_leader:true)
         end
