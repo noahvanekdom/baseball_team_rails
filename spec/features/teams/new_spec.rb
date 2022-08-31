@@ -19,7 +19,7 @@ RSpec.describe 'Team creation' do
   end
 
 
-  it 'can create a new author' do
+  it 'can create a new team' do
     visit '/teams/new'
 
     fill_in('team_name', with: 'Nationals')
