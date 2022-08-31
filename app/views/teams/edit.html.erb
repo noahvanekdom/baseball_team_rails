@@ -1,4 +1,4 @@
-<%= form_with url: '/teams', method: :post, local: true do |form| %>
+<%= form_with url: "/teams/#{@team.id}", method: :patch, local: true do |form| %>
 <%= form.label :name %>
 <%= form.text_field :team_name %>
 <%= form.label :city %>
@@ -7,5 +7,5 @@
 <%= form.text_field :win_percent %>
 <%= form.label :division_leader? %>
 <%= form.text_field :division_leader %>
-<%= form.submit "Create Team" %>
+<%= form.submit "Update Team" %>
 <% end %>

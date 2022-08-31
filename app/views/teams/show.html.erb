@@ -1,6 +1,7 @@
 <%= link_to "Players on the #{@team.team_name}", "/teams/#{@team.id}/players" %>
 <%= link_to "Teams", "/teams" %>
 <%= link_to "Players", "/players" %>
+<%= link_to "Edit Team", "/teams/#{@team.id}/edit", method: :get %>
 
 <h1><%= @team.city %> <%= @team.team_name %></h1>
 <h3><%= "Division Leader: #{@team.division_leader}" %></h3>

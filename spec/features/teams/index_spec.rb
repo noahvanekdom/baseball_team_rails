@@ -11,7 +11,6 @@ RSpec.describe 'Teams index page' do
         end
 
         it 'displays the city of the team' do
-
           visit "/teams"
 
           expect(page).to have_content(@rays.city)
@@ -20,7 +19,6 @@ RSpec.describe 'Teams index page' do
         end
 
         it 'displays the name of the team' do
-
           visit "/teams"
 
           expect(page).to have_content(@rays.team_name)
@@ -31,12 +29,14 @@ RSpec.describe 'Teams index page' do
       describe "page links" do
         before(:each) do
         end
+
         it 'has a link to team index' do
           visit "/teams"
           click_link "Teams"
 
           expect(current_path).to eq("/teams")
         end
+
         it 'has a link to the players index' do
           visit "/teams"
           click_link "Players"
