@@ -1,5 +1,6 @@
 <%= link_to "Teams", "/teams" %>
 <%= link_to "Players", "/players" %>
+<%= link_to "Update Player", "/players/#{@player.id}/edit" %>
 
 <h1><%= @player.name %></h1>
 <h3><%= "Handed: #{@player.handed}" %></h3>

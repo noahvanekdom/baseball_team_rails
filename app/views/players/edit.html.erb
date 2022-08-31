@@ -1,0 +1,13 @@
+<%= form_with url: "/players/#{@player.id}", method: :patch, local: true do |form| %>
+<%= form.label :name %>
+<%= form.text_field :name %>
+<%= form.label :obp %>
+<%= form.text_field :obp %>
+<%= form.label :slg %>
+<%= form.text_field :slg %>
+<%= form.label :rule_5_elig? %>
+<%= form.text_field :rule_5_elig %>
+<%= form.label :handed %>
+<%= form.text_field :handed %>
+<%= form.submit "Update Player" %>
+<% end %>
