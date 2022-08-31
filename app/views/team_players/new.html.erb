@@ -1,0 +1,13 @@
+<%= form_with url: "/teams/#{@team.id}/players", method: :post, local: true do |form| %>
+<%= form.label :name %>
+<%= form.text_field :name %>
+<%= form.label :"On Base Percentage" %>
+<%= form.text_field :obp %>
+<%= form.label :"Slugging Percentage"%>
+<%= form.text_field :slg %>
+<%= form.label :"Rule 5 Eligible?" %>
+<%= form.text_field :rule_5_elig %>
+<%= form.label :"Right or Left handed?" %>
+<%= form.text_field :handed %>
+<%= form.submit "Create Player" %>
+<% end %>
